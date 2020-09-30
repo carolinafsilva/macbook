@@ -1,0 +1,16 @@
+brew install cvc4
+brew install eprover
+brew install gh
+brew install git
+brew install jq
+brew install neovim
+brew install node
+brew install opam
+brew install openjdk
+brew install tree
+brew install unrar
+brew install wget
+brew install yices2
+brew install zsh-autosuggestions
+brew install zsh-git-prompt
+brew install zsh-history-substring-search
