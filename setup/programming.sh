@@ -4,17 +4,15 @@ source ~/.zshrc && compaudit | xargs chmod g-w
 # ocaml
 opam init
 opam pin add -y ocaml-lsp-server https://github.com/ocaml/ocaml-lsp.git
-opam install -y z3
+opam install -y z3.4.8.6
 opam install -y yices2
 opam install -y why3-ide
-opam install -y why3
 opam install -y utop
 opam install -y ocamlformat
 opam install -y ocaml-lsp-server
 opam install -y ocaml-base-compiler
 opam install -y merlin
 opam install -y core
-opam install -y altgr-ergo
 opam install -y alt-ergo
 
 # why3
@@ -23,9 +21,12 @@ why3 --list-provers
 
 # python
 python3 -m pip install pytest
+python3 -m pip install pylint
+python3 -m pip install pycryptosat
+python3 -m pip install pwn
 python3 -m pip install pip-chill
+python3 -m pip install ipykernel
 python3 -m pip install flask-sqlalchemy
-python3 -m pip install flask-socketio
 python3 -m pip install autopep8
 
 # vscode
@@ -44,9 +45,14 @@ code \
     --install-extension ms-vscode-remote.remote-ssh-edit \
     --install-extension ms-vscode-remote.remote-ssh \
     --install-extension ms-vscode-remote.remote-containers \
+    --install-extension ms-python.vscode-pylance \
     --install-extension ms-python.python \
+    --install-extension justusadam.language-haskell \
+    --install-extension haskell.haskell \
     --install-extension franekp.language-whyml \
     --install-extension equinusocio.vsc-material-theme-icons \
     --install-extension Equinusocio.vsc-material-theme \
+    --install-extension Equinusocio.vsc-community-material-theme \
     --install-extension Dart-Code.flutter \
-    --install-extension Dart-Code.dart-code
+    --install-extension Dart-Code.dart-code \
+    --install-extension analytic-signal.preview-pdf
