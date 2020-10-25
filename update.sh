@@ -29,6 +29,9 @@ grep -v -e "opam install -y" setup/programming.sh > /tmp/programming.sh
 opam list -s --roots | xargs -I '{}' sed -i "" -e '/^opam pin add/a\
 opam install -y {}' /tmp/programming.sh
 
+# add required version
+sed -i "" "s/z3/z3.4.8.6/" /tmp/programming.sh
+
 # Update file
 mv /tmp/programming.sh setup/programming.sh
 
