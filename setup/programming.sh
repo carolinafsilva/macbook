@@ -49,6 +49,7 @@ code \
     --install-extension ms-python.vscode-pylance \
     --install-extension ms-python.python \
     --install-extension justusadam.language-haskell \
+    --install-extension JHeilingbrunner.vscode-gnupg-tool \
     --install-extension haskell.haskell \
     --install-extension franekp.language-whyml \
     --install-extension equinusocio.vsc-material-theme-icons \
