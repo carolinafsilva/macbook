@@ -8,12 +8,12 @@ brew install eprover
 brew install gh
 brew install ghc
 brew install git
+brew install gnupg
 brew install gperf
 brew install gtksourceview
 brew install haskell-stack
 brew install jq
 brew install libpoly
-brew install libtool
 brew install libxml2
 brew install mas
 brew install neovim
