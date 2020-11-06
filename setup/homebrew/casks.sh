@@ -2,10 +2,12 @@ brew cask install adobe-creative-cloud
 brew cask install adoptopenjdk
 brew cask install bartender
 brew cask install brave-browser
+brew cask install chromedriver
 brew cask install discord
 brew cask install docker
 brew cask install flutter
 brew cask install font-jetbrains-mono
+brew cask install gpg-suite
 brew cask install jetbrains-toolbox
 brew cask install karabiner-elements
 brew cask install kindle

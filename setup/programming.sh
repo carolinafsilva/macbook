@@ -3,7 +3,7 @@ source ~/.zshrc && compaudit | xargs chmod g-w
 
 # ocaml
 opam init
-opam pin add -y ocaml-lsp-server https://github.com/ocaml/ocaml-lsp.git
+opam pin add -y ocaml-lsp-server git+https://github.com/ocaml/ocaml-lsp.git
 opam install -y z3.4.8.6
 opam install -y yices2
 opam install -y why3-ide
@@ -20,6 +20,7 @@ why-3 config --detect
 why3 --list-provers
 
 # python
+python3 -m pip install selenium
 python3 -m pip install pytest
 python3 -m pip install pylint
 python3 -m pip install pycryptosat

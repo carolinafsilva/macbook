@@ -15,6 +15,7 @@ brew install jq
 brew install libpoly
 brew install libtool
 brew install libxml2
+brew install mas
 brew install neovim
 brew install node
 brew install opam

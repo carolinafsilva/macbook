@@ -16,5 +16,8 @@ git clone --bare https://github.com/CarolinaFSilva/dotfiles $HOME/.dotfiles
 git --git-dir=$HOME/.dotfiles --work-tree=$HOME config --local status.showUntrackedFiles no
 git --git-dir=$HOME/.dotfiles --work-tree=$HOME reset --hard
 
+# appstore
+/bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/CarolinaFSilva/macbook/master/setup/appstore.sh)"
+
 # programming
 /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/CarolinaFSilva/macbook/master/setup/programming.sh)"
