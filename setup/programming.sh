@@ -4,7 +4,7 @@ source ~/.zshrc && compaudit | xargs chmod g-w
 # ocaml
 opam init
 opam pin add -y ocaml-lsp-server git+https://github.com/ocaml/ocaml-lsp.git
-opam install -y z3.4.8.6
+opam install -y z3
 opam install -y yices2
 opam install -y why3-ide
 opam install -y utop
@@ -23,7 +23,6 @@ why3 --list-provers
 python3 -m pip install selenium
 python3 -m pip install pytest
 python3 -m pip install pylint
-python3 -m pip install pycryptosat
 python3 -m pip install pwn
 python3 -m pip install pip-chill
 python3 -m pip install ipykernel
@@ -39,6 +38,7 @@ code \
     --install-extension vscjava.vscode-java-dependency \
     --install-extension vscjava.vscode-java-debug \
     --install-extension VisualStudioExptTeam.vscodeintellicode \
+    --install-extension SonarSource.sonarlint-vscode \
     --install-extension redhat.java \
     --install-extension ocamllabs.ocaml-platform \
     --install-extension ms-vsliveshare.vsliveshare \
@@ -46,6 +46,7 @@ code \
     --install-extension ms-vscode-remote.remote-ssh-edit \
     --install-extension ms-vscode-remote.remote-ssh \
     --install-extension ms-vscode-remote.remote-containers \
+    --install-extension ms-toolsai.jupyter \
     --install-extension ms-python.vscode-pylance \
     --install-extension ms-python.python \
     --install-extension justusadam.language-haskell \
