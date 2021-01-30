@@ -4,8 +4,6 @@ source ~/.zshrc && compaudit | xargs chmod g-w
 # ocaml
 opam init
 opam pin add -y ocaml-lsp-server git+https://github.com/ocaml/ocaml-lsp.git
-opam install -y z3
-opam install -y yices2
 opam install -y why3-ide
 opam install -y utop
 opam install -y ocamlformat
@@ -42,6 +40,7 @@ code \
     --install-extension redhat.java \
     --install-extension ocamllabs.ocaml-platform \
     --install-extension ms-vsliveshare.vsliveshare \
+    --install-extension ms-vscode.hexeditor \
     --install-extension ms-vscode.cpptools \
     --install-extension ms-vscode-remote.remote-ssh-edit \
     --install-extension ms-vscode-remote.remote-ssh \

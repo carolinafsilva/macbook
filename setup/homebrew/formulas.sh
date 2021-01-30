@@ -1,13 +1,17 @@
 brew install automake
 brew install cabal-install
 brew install cmake
+brew install coreutils
 brew install cvc4
 brew install eprover
 brew install gh
 brew install git
+brew install gperf
+brew install gtksourceview
 brew install haskell-stack
 brew install hugo
 brew install jq
+brew install libtool
 brew install mas
 brew install neovim
 brew install node
@@ -15,6 +19,7 @@ brew install opam
 brew install openjdk
 brew install pypy3
 brew install python
+brew install yices
 brew install tree
 brew install unrar
 brew install wget
