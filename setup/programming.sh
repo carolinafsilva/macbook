@@ -3,7 +3,7 @@ source ~/.zshrc && compaudit | xargs chmod g-w
 
 # ocaml
 opam init
-opam pin add -y ocaml-lsp-server git+https://github.com/ocaml/ocaml-lsp.git
+opam switch create default 4.12.0
 opam install -y why3-ide
 opam install -y utop
 opam install -y ocamlformat
@@ -18,14 +18,14 @@ why-3 config --detect
 why3 --list-provers
 
 # python
-python3 -m pip install selenium
-python3 -m pip install pytest
-python3 -m pip install pylint
-python3 -m pip install pwn
-python3 -m pip install pip-chill
-python3 -m pip install ipykernel
-python3 -m pip install flask-sqlalchemy
-python3 -m pip install autopep8
+pip3 install -U selenium
+pip3 install -U pytest
+pip3 install -U pylint
+pip3 install -U pwn
+pip3 install -U pip-chill
+pip3 install -U ipykernel
+pip3 install -U flask-sqlalchemy
+pip3 install -U autopep8
 
 # vscode
 code \
@@ -39,6 +39,8 @@ code \
     --install-extension SonarSource.sonarlint-vscode \
     --install-extension redhat.java \
     --install-extension ocamllabs.ocaml-platform \
+    --install-extension ms-vsliveshare.vsliveshare-pack \
+    --install-extension ms-vsliveshare.vsliveshare-audio \
     --install-extension ms-vsliveshare.vsliveshare \
     --install-extension ms-vscode.hexeditor \
     --install-extension ms-vscode.cpptools \
@@ -55,6 +57,9 @@ code \
     --install-extension equinusocio.vsc-material-theme-icons \
     --install-extension Equinusocio.vsc-material-theme \
     --install-extension Equinusocio.vsc-community-material-theme \
+    --install-extension ecmel.vscode-html-css \
     --install-extension Dart-Code.flutter \
     --install-extension Dart-Code.dart-code \
-    --install-extension analytic-signal.preview-pdf
+    --install-extension correctnessLab.dafny-vscode \
+    --install-extension analytic-signal.preview-pdf \
+    --install-extension alexcvzz.vscode-sqlite

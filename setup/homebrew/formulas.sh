@@ -12,6 +12,7 @@ brew install haskell-stack
 brew install hugo
 brew install jq
 brew install libtool
+brew install luajit
 brew install mas
 brew install neovim
 brew install node

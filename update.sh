@@ -7,66 +7,80 @@
 
 ### Homebrew
 
-## taps.sh
 
+## taps.sh
 brew tap | xargs -I '{}' echo 'brew tap {}' > setup/homebrew/taps.sh
 chmod +x setup/homebrew/taps.sh
 
-## formulas.sh
 
+## formulas.sh
 brew leaves | sed -e 's/@.*//' -e 's|\(.*/\)*||' | xargs -I '{}' echo 'brew install {}' > setup/homebrew/formulas.sh
 chmod +x setup/homebrew/formulas.sh
 
-## casks.sh
 
-brew list --cask | xargs -I '{}' echo 'brew cask install {}' > setup/homebrew/casks.sh
+## casks.sh
+brew list --cask | xargs -I '{}' echo 'brew install --cask {}' > setup/homebrew/casks.sh
 chmod +x setup/homebrew/casks.sh
 
-### Appstore.sh
 
+
+### App Store
+
+
+## appstore.sh
 mas list | awk '{ printf("%s # %s\n", $1, $2) }' | xargs -I '{}' echo 'mas install {}' > setup/appstore.sh
+
+
 
 ### Programming.sh
 
+
 ## Cron
 
-# remove crontab configuration
+# remove previous crontab configuration
 sed -i '' -e "0$(sed -n '/^crontab <<EOF/=' setup/programming.sh),0$(sed -n '/^EOF/=' setup/programming.sh)d" setup/programming.sh
 
 # add current crontab configuration
 { echo 'crontab <<EOF'; crontab -l; echo 'EOF' } | tail -r | xargs -I '{}' sed -i '' -e '/^# cron/a\
 {}' setup/programming.sh
 
+
 ## Opam
 
-# remove packages list
-sed -i '' -e '/opam install -y.*$/d' -e '/opam pin add -y.*$/d' setup/programming.sh
+# remove previous switch
+sed -i '' -e '/opam switch create.*$/d' setup/programming.sh
 
-# add pinned packages
-opam list --pinned | awk 'NR > 2 { printf("%s %s\n", $1, $8) }' | xargs -I '{}' sed -i '' -e '/opam init/a\
-opam pin add -y {}' setup/programming.sh
+# add latest switch
+opam switch list-available | grep "ocaml-base-compiler.*Official release" | \
+awk '{ printf("%s\n", $2) }' | tail -n 1 | xargs -I '{}' sed -i '' -e '/^opam init/a\
+opam switch create default {}' setup/programming.sh
 
-# add current packages
-opam list -s --roots | xargs -I '{}' sed -i '' -e '/^opam pin add/a\
+# remove previous package list
+sed -i '' -e '/opam install -y.*$/d' setup/programming.sh
+
+# add current package list
+opam list -s --roots | xargs -I '{}' sed -i '' -e '/^opam switch create/a\
 opam install -y {}' setup/programming.sh
+
 
 ## Python
 
-# remove packages list
-sed -i '' -e '/python3 -m pip install.*$/d' setup/programming.sh
+# remove previous package list
+sed -i '' -e '/pip3 install -U.*$/d' setup/programming.sh
 
-# add current packages
+# add current package list
 pip-chill --no-version | xargs -I '{}' sed -i '' -e '/^# python/a\
-python3 -m pip install {}' setup/programming.sh
+pip3 install -U {}' setup/programming.sh
+
 
 ## VSCode extensions
 
-# remove extensions list
+# remove previous extension list
 sed -i '' -e '/--install-extension.*$/d' setup/programming.sh
 
-# add current extensions to list
+# add current extension list
 code --list-extensions | xargs -I '{}' sed -i '' -e '/^code \\/a\
 \ \ \ \ --install-extension {} \\' setup/programming.sh
 
-# remove last \
+# remove last '\'
 sed -i '' -e "$(sed -n '/--install-extension/=' setup/programming.sh | tail -n 1)"'s/ \\//' setup/programming.sh
