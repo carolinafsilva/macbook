@@ -15,6 +15,7 @@ brew install --cask karabiner-elements
 brew install --cask kindle
 brew install --cask macmediakeyforwarder
 brew install --cask microsoft-teams
+brew install --cask neovim-nightly
 brew install --cask notion
 brew install --cask sage
 brew install --cask signal

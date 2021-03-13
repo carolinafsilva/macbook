@@ -1,5 +1,6 @@
 brew install automake
 brew install cabal-install
+brew install cask
 brew install cmake
 brew install coreutils
 brew install cvc4
@@ -11,10 +12,13 @@ brew install gtksourceview
 brew install haskell-stack
 brew install hugo
 brew install jq
-brew install libtool
+brew install libtermkey
+brew install libuv
+brew install libvterm
 brew install luajit
+brew install luajit-openresty
 brew install mas
-brew install neovim
+brew install msgpack
 brew install node
 brew install opam
 brew install openjdk
