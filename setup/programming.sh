@@ -2,20 +2,28 @@
 source ~/.zshrc && compaudit | xargs chmod g-w
 
 # ocaml
+curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh | sh
+
 opam init
 opam switch create default 4.12.0
 opam install -y why3-ide
 opam install -y utop
+opam install -y opam-depext
 opam install -y ocamlformat
 opam install -y ocaml-lsp-server
 opam install -y ocaml-base-compiler
 opam install -y merlin
 opam install -y core
+opam install -y coqide
+opam install -y coq
 opam install -y alt-ergo
 
 # why3
 why-3 config --detect
 why3 --list-provers
+
+# Haskell
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org| sh
 
 # python
 pip3 install -U selenium
@@ -37,6 +45,7 @@ code \
     --install-extension vscjava.vscode-java-debug \
     --install-extension VisualStudioExptTeam.vscodeintellicode \
     --install-extension SonarSource.sonarlint-vscode \
+    --install-extension roscaj.dafny-vscode \
     --install-extension redhat.java \
     --install-extension ocamllabs.ocaml-platform \
     --install-extension ms-vsliveshare.vsliveshare-pack \
@@ -50,6 +59,7 @@ code \
     --install-extension ms-toolsai.jupyter \
     --install-extension ms-python.vscode-pylance \
     --install-extension ms-python.python \
+    --install-extension maximedenes.vscoq \
     --install-extension justusadam.language-haskell \
     --install-extension JHeilingbrunner.vscode-gnupg-tool \
     --install-extension haskell.haskell \

@@ -8,8 +8,10 @@ brew install --cask discord
 brew install --cask docker
 brew install --cask flutter
 brew install --cask font-jetbrains-mono
+brew install --cask gephi
 brew install --cask google-chrome
 brew install --cask gpg-suite
+brew install --cask ipfs
 brew install --cask jetbrains-toolbox
 brew install --cask karabiner-elements
 brew install --cask kindle
@@ -22,6 +24,7 @@ brew install --cask signal
 brew install --cask slack
 brew install --cask spotify
 brew install --cask stremio
+brew install --cask swiftbar
 brew install --cask syncplay
 brew install --cask transmission
 brew install --cask virtualbox
