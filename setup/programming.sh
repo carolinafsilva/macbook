@@ -19,7 +19,7 @@ opam install -y coq
 opam install -y alt-ergo
 
 # why3
-why3 config --detect
+why3 config detect
 
 # Haskell
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org| sh
