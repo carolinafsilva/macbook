@@ -5,14 +5,16 @@ source ~/.zshrc && compaudit | xargs chmod g-w
 curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh | sh
 
 opam init
-opam switch create default 4.12.0
+opam switch create default 4.13.0
 opam install -y why3-ide
+opam install -y why3-coq
 opam install -y utop
 opam install -y opam-depext
 opam install -y ocamlformat
 opam install -y ocaml-lsp-server
 opam install -y ocaml-base-compiler
 opam install -y merlin
+opam install -y easycrypt
 opam install -y core
 opam install -y coqide
 opam install -y coq
@@ -36,6 +38,7 @@ pip3 install -U autopep8
 
 # vscode
 code \
+    --install-extension wholroyd.jinja \
     --install-extension wayou.vscode-todo-highlight \
     --install-extension vscjava.vscode-maven \
     --install-extension vscjava.vscode-java-test \
@@ -43,6 +46,7 @@ code \
     --install-extension vscjava.vscode-java-dependency \
     --install-extension vscjava.vscode-java-debug \
     --install-extension VisualStudioExptTeam.vscodeintellicode \
+    --install-extension tomoki1207.pdf \
     --install-extension SonarSource.sonarlint-vscode \
     --install-extension roscaj.dafny-vscode \
     --install-extension redhat.java \
@@ -55,6 +59,7 @@ code \
     --install-extension ms-vscode-remote.remote-ssh-edit \
     --install-extension ms-vscode-remote.remote-ssh \
     --install-extension ms-vscode-remote.remote-containers \
+    --install-extension ms-toolsai.jupyter-keymap \
     --install-extension ms-toolsai.jupyter \
     --install-extension ms-python.vscode-pylance \
     --install-extension ms-python.python \
@@ -71,5 +76,4 @@ code \
     --install-extension Dart-Code.dart-code \
     --install-extension correctnessLab.dafny-vscode \
     --install-extension asvetliakov.vscode-neovim \
-    --install-extension analytic-signal.preview-pdf \
     --install-extension alexcvzz.vscode-sqlite

@@ -5,5 +5,6 @@ mas install 595191960 # CopyClip
 mas install 937984704 # Amphetamine
 mas install 1444383602 # GoodNotes
 mas install 497799835 # Xcode
-mas install 1320666476 # Wipr
+mas install 1440147259 # AdGuard
+mas install 1091189122 # Bear
 mas install 441258766 # Magnet
